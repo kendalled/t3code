@@ -251,6 +251,7 @@ export const TraitsMenuContent = memo(function TraitsMenuContentImpl({
                 <MenuRadioItem
                   key={option.value}
                   value={option.value}
+                  className="cursor-pointer"
                   disabled={ultrathinkInBodyText}
                 >
                   {option.label}
@@ -271,8 +272,12 @@ export const TraitsMenuContent = memo(function TraitsMenuContentImpl({
               );
             }}
           >
-            <MenuRadioItem value="on">On (default)</MenuRadioItem>
-            <MenuRadioItem value="off">Off</MenuRadioItem>
+            <MenuRadioItem value="on" className="cursor-pointer">
+              On (default)
+            </MenuRadioItem>
+            <MenuRadioItem value="off" className="cursor-pointer">
+              Off
+            </MenuRadioItem>
           </MenuRadioGroup>
         </MenuGroup>
       ) : null}
@@ -289,8 +294,12 @@ export const TraitsMenuContent = memo(function TraitsMenuContentImpl({
                 );
               }}
             >
-              <MenuRadioItem value="off">off</MenuRadioItem>
-              <MenuRadioItem value="on">on</MenuRadioItem>
+              <MenuRadioItem value="off" className="cursor-pointer">
+                off
+              </MenuRadioItem>
+              <MenuRadioItem value="on" className="cursor-pointer">
+                on
+              </MenuRadioItem>
             </MenuRadioGroup>
           </MenuGroup>
         </>
@@ -313,7 +322,7 @@ export const TraitsMenuContent = memo(function TraitsMenuContentImpl({
               }}
             >
               {contextWindowOptions.map((option) => (
-                <MenuRadioItem key={option.value} value={option.value}>
+                <MenuRadioItem key={option.value} value={option.value} className="cursor-pointer">
                   {option.label}
                   {option.value === defaultContextWindow ? " (default)" : ""}
                 </MenuRadioItem>
@@ -382,6 +391,7 @@ export const TraitsPicker = memo(function TraitsPicker({
       }}
     >
       <MenuTrigger
+        className="cursor-pointer"
         render={
           <Button
             size="sm"
