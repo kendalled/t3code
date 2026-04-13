@@ -137,6 +137,7 @@ export const ProviderModelPicker = memo(function ProviderModelPicker(props: {
                 <MenuRadioItem
                   key={`${props.lockedProvider}:${modelOption.slug}`}
                   value={modelOption.slug}
+                  className="cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {modelOption.name}
@@ -195,6 +196,7 @@ export const ProviderModelPicker = memo(function ProviderModelPicker(props: {
                           <MenuRadioItem
                             key={`${option.value}:${modelOption.slug}`}
                             value={modelOption.slug}
+                            className="cursor-pointer"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {modelOption.name}
