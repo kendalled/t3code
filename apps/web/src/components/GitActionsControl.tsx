@@ -905,6 +905,7 @@ export default function GitActionsControl({
             }}
           >
             <MenuTrigger
+              className="cursor-pointer"
               render={<Button aria-label="Git action options" size="icon-xs" variant="outline" />}
               disabled={isGitActionRunning}
             >
